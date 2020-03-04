@@ -1,1 +1,1 @@
-# minishell
+Recreation of C shell.
