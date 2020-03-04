@@ -24,7 +24,7 @@ void    init_shell()
     // ---------------------------------------------------------
     char    *username = getenv("USER");
     // ---------------------------------------------------------
-    printf("\n\n\nUser is: @%s", username);
+    printf("\n\n\nUsername: %s", username);
     printf("\n");
     // ---------------------------------------------------------
     sleep(1);
@@ -157,8 +157,8 @@ void    exec_piped_args(char **parsed, char **parsedpipe)
 void    open_help()
 {
     puts("\n----------------------------------------------------"
-        "\n\t***Welcome to Shell Help***"
-        "\n\tCopyright @ knkonzom"
+        "\n\tWelcome to Shell Help"
+        // "\n\tCopyright @ knkonzom"
         "\n\tUse shell at your own risk..."
         "\n\tList of supported commands:"
         "\n\t\t>cd"
@@ -280,7 +280,7 @@ int     main()
     init_shell();
     while (1)
     {
-        print_dir(); // Printing shell line.
+        // print_dir(); // Printing shell line.
         if (take_input(input_string))
             continue;
         exec_flag = process_string(input_string, parsed_args, parsed_args_piped);
